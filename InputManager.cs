@@ -72,7 +72,16 @@ namespace TaskMartianRobots
                         }
                         else
                         {
-                            Console.WriteLine("There must be at least one robot and one commands line");
+                            switch (output.Count)
+                            {
+                                case (0):
+                                    Console.WriteLine("You should type surface size first");
+                                    break;
+                                default:
+                                   Console.WriteLine("There must be at least one robot and one commands line");
+                                    break;
+                            }
+                          
                         }
                     }
                 }
